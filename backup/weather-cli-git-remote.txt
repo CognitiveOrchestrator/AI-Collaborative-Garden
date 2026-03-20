@@ -1,0 +1,2 @@
+origin	https://github.com/CrazyMinions/weather-cli.git (fetch)
+origin	https://github.com/CrazyMinions/weather-cli.git (push)

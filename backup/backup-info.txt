@@ -1,0 +1,2 @@
+备份时间: Fri Mar 20 22:38:47     2026
+项目路径: /c/Users/Administrator/projects/weather-cli

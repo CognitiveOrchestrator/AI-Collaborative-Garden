@@ -1,0 +1,20 @@
+total 129
+drwxr-xr-x 1 Administrator 197121     0 Mar 20 22:21 .
+drwxr-xr-x 1 Administrator 197121     0 Mar 20 22:34 ..
+-rw-r--r-- 1 Administrator 197121   176 Mar 20 12:33 .env
+-rw-r--r-- 1 Administrator 197121   295 Mar 20 12:35 .env.example
+drwxr-xr-x 1 Administrator 197121     0 Mar 20 22:38 .git
+drwxr-xr-x 1 Administrator 197121     0 Mar 19 18:32 .github
+-rw-r--r-- 1 Administrator 197121   124 Mar 19 23:36 .gitignore
+drwxr-xr-x 1 Administrator 197121     0 Mar 20 22:21 .sisyphus
+-rw-r--r-- 1 Administrator 197121  6302 Mar 20 20:37 README.md
+drwxr-xr-x 1 Administrator 197121     0 Mar 20 14:44 dist
+drwxr-xr-x 1 Administrator 197121     0 Mar 20 12:41 node_modules
+-rw-r--r-- 1 Administrator 197121 52427 Mar 20 12:41 package-lock.json
+-rw-r--r-- 1 Administrator 197121  1203 Mar 20 12:44 package.json
+-rw-r--r-- 1 Administrator 197121    39 Mar 19 18:22 response.json
+drwxr-xr-x 1 Administrator 197121     0 Mar 20 17:10 src
+drwxr-xr-x 1 Administrator 197121     0 Mar 20 17:20 test
+-rw-r--r-- 1 Administrator 197121   946 Mar 20 08:06 test-resolve.js
+-rw-r--r-- 1 Administrator 197121   381 Mar 19 18:19 tsconfig.json
+-rw-r--r-- 1 Administrator 197121 25256 Mar 19 18:21 weather_response.json
