@@ -6,8 +6,9 @@
   "main": "src/index.js",
   "scripts": {
     "demo": "node examples/basic-collaboration/demo.js",
-    "test": "echo \"No test specified\"",
-    "lint": "echo \"No lint configured\""
+    "test": "echo \"Tests will be added in future\"",
+    "lint": "echo \"Linting will be configured in future\"",
+    "format:check": "echo \"Format check will be configured in future\""
   },
   "keywords": [
     "ai",
