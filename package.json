@@ -6,9 +6,13 @@
   "main": "src/index.js",
   "scripts": {
     "demo": "node examples/basic-collaboration/demo.js",
-    "test": "echo \"Tests will be added in future\"",
-    "lint": "echo \"Linting will be configured in future\"",
-    "format:check": "echo \"Format check will be configured in future\""
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src/ tests/ examples/",
+    "lint:fix": "eslint src/ tests/ examples/ --fix",
+    "format": "prettier --write \"**/*.{js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{js,json,md}\""
   },
   "keywords": [
     "ai",
@@ -17,5 +21,13 @@
     "open-source"
   ],
   "author": "CognitiveOrchestrator",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.1.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "prettier": "^3.8.1",
+    "vitest": "^4.1.0"
+  }
 }

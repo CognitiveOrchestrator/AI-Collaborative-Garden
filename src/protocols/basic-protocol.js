@@ -36,31 +36,34 @@ class BasicCollaborationProtocol {
    */
   validateRequest(request) {
     const violations = [];
-    
+
     // 检查透明性要求
-    if (!request.transparency && this.rules.find(r => r.id === 'transparency').enforce) {
+    if (!request.transparency && this.rules.find((r) => r.id === 'transparency').enforce) {
       violations.push({
         rule: 'transparency',
         message: '请求缺少透明度要求',
       });
     }
-    
+
     // 检查人类参与
-    if (!request.humanApproval && this.rules.find(r => r.id === 'human-in-loop').enforce) {
+    if (!request.humanApproval && this.rules.find((r) => r.id === 'human-in-loop').enforce) {
       violations.push({
         rule: 'human-in-loop',
         message: '关键决策需要人类审批',
       });
     }
-    
+
     // 检查安全边界
-    if (request.riskLevel === 'high' && this.rules.find(r => r.id === 'safety-boundary').enforce) {
+    if (
+      request.riskLevel === 'high' &&
+      this.rules.find((r) => r.id === 'safety-boundary').enforce
+    ) {
       violations.push({
         rule: 'safety-boundary',
         message: '高风险操作需要额外安全审查',
       });
     }
-    
+
     return {
       valid: violations.length === 0,
       violations,
@@ -97,7 +100,7 @@ class BasicCollaborationProtocol {
    */
   checkTransparency(session) {
     if (!session.decisions) return true;
-    return session.decisions.every(d => d.transparency === 'high');
+    return session.decisions.every((d) => d.transparency === 'high');
   }
 
   /**
@@ -105,13 +108,13 @@ class BasicCollaborationProtocol {
    */
   checkHumanInLoop(session) {
     if (!session.decisions) return false;
-    return session.decisions.some(d => d.agent === 'human');
+    return session.decisions.some((d) => d.agent === 'human');
   }
 
   /**
    * 检查安全边界合规
    */
-  checkSafetyBoundary(session) {
+  checkSafetyBoundary(_session) {
     // 简化实现
     return true;
   }
@@ -121,15 +124,15 @@ class BasicCollaborationProtocol {
    */
   generateRecommendations(session) {
     const recommendations = [];
-    
+
     if (!this.checkTransparency(session)) {
       recommendations.push('提高决策透明度');
     }
-    
+
     if (!this.checkHumanInLoop(session)) {
       recommendations.push('增加人类参与环节');
     }
-    
+
     return recommendations;
   }
 }
