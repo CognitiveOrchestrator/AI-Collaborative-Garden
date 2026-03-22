@@ -1,0 +1,20 @@
+{
+  "name": "ai-collaborative-garden",
+  "version": "1.0.0",
+  "description": "AI与人类协同创造的开源实验平台",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "demo": "node examples/basic-collaboration/demo.js",
+    "test": "echo \"No test specified\"",
+    "lint": "echo \"No lint configured\""
+  },
+  "keywords": [
+    "ai",
+    "collaboration",
+    "experiment",
+    "open-source"
+  ],
+  "author": "CognitiveOrchestrator",
+  "license": "MIT"
+}
